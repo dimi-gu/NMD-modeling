@@ -1,6 +1,6 @@
-# Non-Maturity Deposit Rate Modelling with an Error-Correction Model
+# Non Maturity Deposit Rate Modelling with an Error-Correction Model
 
-A Python/Jupyter workflow for estimating the behaviour of **non-maturity deposit (NMD) customer rates** using a long-run pass-through regression and a short-run **Error-Correction Model (ECM)**.
+A Python/Jupyter workflow for estimating the behaviour of **Non Maturity Deposit (NMD) customer rates** using a long-run pass-through regression and a short-run **Error-Correction Model (ECM)**.
 
 The notebook combines Italian household deposit rates with market-rate and sovereign-spread data, performs model selection and residual diagnostics, estimates the speed of adjustment toward equilibrium, calculates mean-reversion time, and evaluates out-of-sample forecasts.
 
@@ -8,7 +8,7 @@ The notebook combines Italian household deposit rates with market-rate and sover
 
 ## Main Features
 
-- Imports NMD customer rates from a Bank of Italy workbook
+- Imports NMD customer rates from a Bank of Italy public database
 - Imports Euribor and sovereign yields from ECB CSV files
 - Converts quarterly customer-rate observations to a monthly series
 - Constructs the Italian–German 10-year sovereign spread
