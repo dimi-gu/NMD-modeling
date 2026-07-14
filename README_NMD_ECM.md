@@ -8,6 +8,7 @@ The notebook combines Italian household deposit rates with market-rate and sover
 
 ## Main Features
 
+The notebook:
 - Imports NMD customer rates from a Bank of Italy public database
 - Imports Euribor and sovereign yields from ECB CSV files
 - Converts quarterly customer-rate observations to a monthly series
