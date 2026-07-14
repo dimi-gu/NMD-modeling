@@ -68,13 +68,10 @@ The start and end dates are inferred from the NMD customer-rate dataset.
 
 ## Usage
 
-1. Download the market-rate CSV files from the ECB Data Portal.
-2. Export the NMD customer-rate workbook from the Bank of Italy database.
-3. Rename the files exactly as required by the notebook.
-4. Place all four input files beside the notebook.
-5. Set the desired `test_size`.
-6. Run the notebook from top to bottom.
-7. Review the model-selection logs, diagnostics, coefficients, mean-reversion time, and forecasting results.
+1. Place all four input files beside the notebook.
+2. Set the desired `test_size`.
+3. Run the notebook from top to bottom.
+4. Review the model-selection logs, diagnostics, coefficients, mean-reversion time, and forecasting results.
 
 ---
 
