@@ -40,12 +40,11 @@ Place the following four files in the same directory as the notebook:
 
 ```text
 .
-├── NMD_Rate_ECM.ipynb
 ├── rate_NMD.xlsx
 ├── euribor1M.csv
 ├── ita_10y.csv
 ├── ger_10y.csv
-└── README.md
+
 ```
 
 ### 1. `rate_NMD.xlsx`
