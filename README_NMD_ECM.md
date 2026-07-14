@@ -36,7 +36,7 @@ The notebook:
 
 ## Input Data
 
-Place the following four files in the same directory as the notebook:
+Place the following four input files in the same directory as the notebook:
 
 ```text
 
