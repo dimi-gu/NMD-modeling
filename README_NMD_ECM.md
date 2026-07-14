@@ -66,22 +66,6 @@ The start and end dates are inferred from the NMD customer-rate dataset.
 
 ---
 
-## Installation
-
-Install the required packages with:
-
-```bash
-pip install numpy pandas matplotlib statsmodels openpyxl jupyter
-```
-
-Start Jupyter with:
-
-```bash
-jupyter notebook
-```
-
----
-
 ## Usage
 
 1. Download the market-rate CSV files from the ECB Data Portal.
