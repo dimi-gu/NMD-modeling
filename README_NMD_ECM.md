@@ -84,12 +84,12 @@ A variable is removed when its coefficient has the wrong expected sign or its p-
 
 The short-run model is designed to capture customer-rate stickiness and potentially asymmetric reactions to market-rate changes:
 
-$$\
-\Delta r_t =
-\theta \left(r_{t-1}-\widehat r_{t-1}\right)
-+\gamma^+\Delta r_t^{m,+}
-+\gamma^-\Delta r_t^{m,-}
-\$$
+$$
+\Delta r_t = \theta (r_{t-1} - \hat{r}_{t-1}) 
++ \gamma^+ \Delta r_t^{m+} \mathbb{1}_{\mathbb R^+}(r_t^{m})  
++ \gamma^- \Delta r_t^{m-} \mathbb{1}_{\mathbb R^-}(r_t^{m})
+\qquad \
+$$ 
 
 where:
 
