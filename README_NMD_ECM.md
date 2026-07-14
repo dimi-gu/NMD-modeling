@@ -39,119 +39,13 @@ The notebook:
 Place the following four files in the same directory as the notebook:
 
 ```text
-.
+
 ├── rate_NMD.xlsx
 ├── euribor1M.csv
 ├── ita_10y.csv
 ├── ger_10y.csv
 
 ```
-
-### 1. `rate_NMD.xlsx`
-
-Source: Bank of Italy statistical database.
-
-The notebook reads the sheet:
-
-```text
-Report
-```
-
-Expected structure:
-
-| First column | Producer households | Other optional columns |
-|---|---:|---:|
-| Date | Customer rate | ... |
-
-Processing steps:
-
-1. the first column is renamed `DATE`;
-2. `DATE` is parsed using day-first format;
-3. empty columns are removed;
-4. `Producer households` is renamed `customer_rate`;
-5. quarterly observations are reindexed to month-end;
-6. missing monthly rates are filled using linear interpolation.
-
-### 2. `euribor1M.csv`
-
-One-month Euribor data from the ECB Data Portal.
-
-Expected structure:
-
-| DATE | Value column |
-|---|---:|
-| 2010-01-31 | 0.42 |
-| 2010-02-28 | 0.39 |
-
-ECB series used in the notebook:
-
-```text
-FM.M.U2.EUR.RT.MM.EURIBOR1MD_.HSTA
-```
-
-### 3. `ita_10y.csv`
-
-Italian 10-year government bond yield from the ECB Data Portal.
-
-ECB series:
-
-```text
-IRS.M.IT.L.L40.CI.0000.EUR.N.Z
-```
-
-### 4. `ger_10y.csv`
-
-German 10-year government bond yield from the ECB Data Portal.
-
-ECB series:
-
-```text
-IRS.M.DE.L.L40.CI.0000.EUR.N.Z
-```
-
-### CSV requirements
-
-Each market-data CSV must contain:
-
-- a `DATE` column;
-- one value column.
-
-Columns whose names contain `TIME PERIOD` or `TIME_PERIOD` are removed automatically. The remaining value column is renamed according to the input dictionary.
-
----
-
-## Constructed Variables
-
-### Sovereign spread
-
-The Italian–German sovereign spread is calculated as:
-
-\[
-\mathrm{Spread}_t
-=
-\mathrm{Italy10Y}_t-\mathrm{Germany10Y}_t
-\]
-
-### COVID dummy
-
-The notebook sets:
-
-```python
-dCovid = 1
-```
-
-for observations from **28 February 2020 through 31 December 2020**, and zero otherwise.
-
-### Units
-
-The source market rates are assumed to be expressed in percentage points. Before estimation, the notebook divides:
-
-- `Euribor_1M`;
-- `customer_rate`;
-- `Spread`
-
-by 100, so model coefficients operate on decimal rates.
-
 ---
 
 ## Configuration
