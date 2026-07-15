@@ -62,7 +62,7 @@ test_size = 18
 | `test_size = 0` | Fits the model using the entire available dataset |
 | `alpha` | Significance threshold for variable selection; currently 5% |
 
-The start and end dates are inferred from the NMD customer-rate dataset.
+The start date (2010-06-30) and the end date (2025-12-31) are inferred from the NMD customer-rate dataset. 
 
 ---
 
