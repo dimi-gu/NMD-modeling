@@ -100,9 +100,8 @@ The notebook applies the following assumptions from the EBA IRRBB standardised-a
 - stable balances are separated into core and non-core components;
 - non-core deposits receive overnight treatment;
 - retail transactional core deposits are capped at 90% of total deposits;
-- the average maturity of the core component is capped at five years.
 
-The notebook’s model-implied mean life greatly exceeds the five-year cap. The model output should therefore be distinguished from the maturity ultimately used for regulatory measurement.
+The notebook’s model-implied mean life greatly exceeds the five-year regulatory cap. The model output should therefore be distinguished from the maturity ultimately used for regulatory measurement.
 
 Users should verify the applicable regulation, version, scope, and institution-specific requirements before relying on these assumptions.
 
