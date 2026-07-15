@@ -81,6 +81,7 @@ Saved results include:
 | \(R^2\) | 7.3% |
 | Euribor coefficient | -0.1467 |
 | Euribor p-value | < 0.001 |
+| pass–through rate (from customer rate moodel) | 0.0589 |
 | Residual standard deviation | 0.00709 |
 | Durbin–Watson statistic | 2.354 |
 | Stable balance | 98.36% of total deposits |
