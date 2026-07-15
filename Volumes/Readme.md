@@ -39,48 +39,13 @@ The notebook downloads and extracts two complete statistical cubes through the B
 
 Used for household deposit amounts.
 
-The notebook retains observations where:
-
-```python
-loc_ctp == "IT"
-set_ctp in ["S14BI2", "600"]
-```
-
-The two household-sector categories are aggregated:
-
-- producer households with up to five employees;
-- consumer households.
-
-The source values are multiplied by 1,000 because the exported amounts are expressed in thousands.
-
 #### `TFR10283`
 
 Used for the number of current accounts in Italy.
 
-The notebook retains:
+### Manual input files
 
-```python
-loc_sport == "IT"
-fenec == "5833004"
-```
-
-The series is reported annually and is converted to monthly frequency through linear interpolation.
-
-Downloaded files are stored under:
-
-```text
-data/raw/bancaditalia/
-├── TDB20290.zip
-├── TDB20290/
-├── TFR10283.zip
-└── TFR10283/
-```
-
-An internet connection is required when the download cell is executed.
-
-### Files supplied manually
-
-Four additional files must be placed in the notebook’s working directory:
+Four additional files (provided in the repository) must be placed in the notebook’s working directory:
 
 ```text
 ita_10y.csv
@@ -88,87 +53,6 @@ ger_10y.csv
 euribor1M.csv
 rate_NMD.xlsx
 ```
-
-#### `ita_10y.csv`
-
-Monthly Italian 10-year government-bond yield.
-
-ECB series used by the notebook:
-
-```text
-IRS.M.IT.L.L40.CI.0000.EUR.N.Z
-```
-
-#### `ger_10y.csv`
-
-Monthly German 10-year government-bond yield.
-
-ECB series:
-
-```text
-IRS.M.DE.L.L40.CI.0000.EUR.N.Z
-```
-
-#### `euribor1M.csv`
-
-Monthly one-month Euribor.
-
-ECB series:
-
-```text
-FM.M.U2.EUR.RT.MM.EURIBOR1MD_.HSTA
-```
-
-Each ECB CSV must contain:
-
-- a `DATE` column;
-- one value column.
-
-Columns containing `TIME PERIOD` or `TIME_PERIOD` are removed automatically.
-
-#### `rate_NMD.xlsx`
-
-NMD customer rates exported from the Banca d’Italia database.
-
-The notebook reads the sheet:
-
-```text
-Report
-```
-
-The first column is treated as the date, and the column:
-
-```text
-Producer households
-```
-
-is renamed:
-
-```text
-customer_rate
-```
-
-Customer rates are reported quarterly and are converted to monthly frequency through linear interpolation.
-
----
-
-## Suggested Repository Structure
-
-```text
-.
-├── NMD_Volume_Model.ipynb
-├── rate_NMD.xlsx
-├── euribor1M.csv
-├── ita_10y.csv
-├── ger_10y.csv
-├── Mean Life - Mathematica.pdf
-├── data/
-│   └── raw/
-│       └── bancaditalia/
-└── README.md
-```
-
-The `data/raw/bancaditalia` directory is created automatically by the notebook.
 
 ---
 
