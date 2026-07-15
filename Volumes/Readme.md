@@ -68,7 +68,7 @@ The Banca d’Italia download step overwrites the local ZIP files with the most 
 
 ---
 
-## Saved Illustrative Results
+## Summary results
 
 The outputs stored in the supplied notebook cover January 2011 through December 2025.
 The final selected model retains only one-month Euribor.
