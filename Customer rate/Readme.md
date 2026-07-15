@@ -136,7 +136,9 @@ The last `test_size` observations are used to evaluate:
 - direct long-run-model predictions;
 - ECM predictions using lagged observed customer rates.
 
-Forecast errors and RMSE are calculated, and actual versus predicted rates are plotted.
+Forecast errors and RMSE are calculated, and actual versus predicted rates are plotted. In particular, for ```python
+test_size = 18
+``` the out-of-sample RSME is 0.00671% in the ECM model and 0.01449% in the long-run model. The ECM's out-of-sample RMSE is 53% lower compared to long-run model. 
 
 ---
 
