@@ -1,43 +1,20 @@
-# Non-Maturity Deposit Volume, Stability, and Mean-Life Modelling
+# Non Maturity Deposit volume modelling
 
 A Python/Jupyter workflow for estimating the behavioural liquidity profile of **non-maturity deposits (NMDs)** using public Italian banking data.
-
-The notebook:
-
-1. downloads household deposit balances and account-count data from Banca d’Italia;
-2. combines them with Euribor, sovereign-spread, and customer-rate data;
-3. models monthly growth in deposits per account;
-4. estimates a conservative stable balance using a **Minimum Probable Amount (MPA)** approach;
-5. separates balances into core and non-core components;
-6. generates a long-term core-deposit decay profile;
-7. calculates the model-implied mean life.
 
 The project is designed as an illustrative IRRBB behavioural-modelling example rather than a production-ready bank model.
 
 ---
 
 ## Main Features
-
-- Automated download of two Banca d’Italia statistical cubes
-- Automatic CSV encoding and separator detection
-- Monthly interpolation of annual account-count observations
-- Monthly interpolation of quarterly customer rates
-- Integration of:
-  - household deposit balances;
-  - number of current accounts;
-  - one-month Euribor;
-  - Italian and German 10-year sovereign yields;
-  - NMD customer rates.
-- Per-account balance construction
-- Log-growth volume model
-- Backward elimination based on statistical significance
-- Residual volatility and normality analysis
-- In-sample fitted values and 1%–99% forecast interval
-- Minimum Probable Amount calculation
-- Stable, core, and non-core deposit split
-- Thirty-year core-balance survival profile
-- Analytical mean-life calculation
-- Comparison with regulatory caps used in the notebook
+The notebook:
+1. downloads household deposit balances and the count of accounts data from Banca d’Italia;
+2. combines them with Euribor, sovereign-spread, and customer-rate data;
+3. models monthly growth rate in deposits per account;
+4. estimates a conservative stable balance using a **Minimum Probable Amount (MPA)** approach;
+5. separates balances into core and non-core components;
+6. generates a long-term core-deposit decay profile;
+7. calculates the model-implied mean life.
 
 ---
 
